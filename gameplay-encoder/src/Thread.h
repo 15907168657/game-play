@@ -64,7 +64,7 @@ namespace gameplay
         void* arg = data->arg;
         delete data;
         data = NULL;
-        int retVal = threadFunction(arg);
+        intptr_t retVal = threadFunction(arg);
         pthread_exit((void*)retVal);
     }
 
